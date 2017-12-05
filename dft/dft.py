@@ -1,8 +1,8 @@
+#!/usr/bin/env python
 # (c) 2017 Nipun Pruthi
 # This file is license under MIT-license available at
-# https://github.com/nipun23/AcousticSignalProcessing/blob/master/LICENSE
+# https://github.com/nipunpruthi/AcousticSignalProcessing/blob/master/LICENSE
 
-#/usr/bin/env python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -15,7 +15,7 @@ def dft(x):
         s=np.exp(-1j * w * np.arange(x.size))
         X=np.append(X,sum(x*s))
 
-    plt.plot(wp/(2*np.pi),X)
+    plt.plot(wp/(2*np.pi),np.abs(X))
     plt.show()
 
 if __name__=='__main__':
